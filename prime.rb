@@ -3,7 +3,7 @@ require 'bigdecimal/math'
 
 puts Benchmark.measure { BigMath.PI(10_000) }
 
-def sieve(max)
+def primenumber(max)
 
   primes = (0..max).to_a
   primes[0] = primes[1] = nil
@@ -21,6 +21,6 @@ def sieve(max)
 end
 
 def prime?(num)
-  sieve(num).include?(num)
+  primenumber(num).include?(num)
 end
 
