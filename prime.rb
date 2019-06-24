@@ -1,9 +1,21 @@
+=begin 
 def prime?(i)
-  return false if i < 2
+return false if i < 2
+(2...i).each do |factor| 
+  return false if i % factor == 0
+end
+true
+end
+=end
 
+#refactored
+
+def prime?(i)
+return false if i < 2
 (2...i).each {|factor| return false if i % factor == 0}
 true
 end
+=end
 
 
 
