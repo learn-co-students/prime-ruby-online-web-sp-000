@@ -1,3 +1,4 @@
+require 'benchmark'
 
 def prime?(int)
 
