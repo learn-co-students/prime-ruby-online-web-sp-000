@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative 'prime.rb'
+
+input = gets.chomp
+
+prime?(input)
+
+puts prime?(input)
