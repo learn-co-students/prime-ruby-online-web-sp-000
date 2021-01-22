@@ -1,11 +1,5 @@
 def prime?(num)
   return false if num <= 1
 
-  i = 2
-  while i < num
-    return false if num % i == 0
-    i += 1
-  end
-
-  return true
+  (2..num-1).to_a.all? {|i| num % i != 0}
 end
