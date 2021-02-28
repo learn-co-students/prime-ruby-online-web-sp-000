@@ -1,15 +1,13 @@
 def prime?(num)
-  if num <= 1
-    return false
-  elsif num <= 3
-    return true
-  elsif num % 2 == 0 
-    return false
-  elsif num % 41 == 0
-    return false
-  elsif num % 33 == 0
-    return false 
-  else 
-    true
+  ret = true
+    if num <= 1
+      return false
+    end
+  array_of_num = (2.. num - 1)
+  array_of_num.each do |i|  
+    if num % i == 0 
+      ret = false
+    end
   end
+  return ret
 end
