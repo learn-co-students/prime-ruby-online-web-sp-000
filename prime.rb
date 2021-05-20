@@ -1,3 +1,5 @@
+require 'benchmark'
+
 def prime?(int)
   if int <= 1
     return false
@@ -7,4 +9,8 @@ def prime?(int)
     end
     true
   end
+end
+
+Benchmark.bm do |x|
+  x.report("Prime? Benchmark") {prime?(363)}
 end
